@@ -8,6 +8,7 @@
 	"workspaceFolder": "/workspace/",
 	"extensions": [
 		"ms-python.python",
-		"shamanu4.django-intellisense"
+		"shamanu4.django-intellisense",
+		"bibhasdn.django-html"
 	]
 }
