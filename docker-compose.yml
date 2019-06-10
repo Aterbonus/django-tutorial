@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      dockerfile: ./docker/app/Dockerfile
+      context: .
+      args:
+        - MY_UID
+        - MY_GID
+    volumes: 
+      - ./app/:/app/
+    

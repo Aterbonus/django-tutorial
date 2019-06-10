@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      dockerfile: ./docker/workspace/Dockerfile
+      context: .
+      args:
+        - MY_UID
+        - MY_GID
+    environment:
+      HOME: /home/user/
+    volumes: 
+      - .:/workspace/
+    user: $MY_UID:$MY_GID
+    command: sleep infinity
