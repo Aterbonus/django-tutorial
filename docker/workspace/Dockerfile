@@ -1,5 +1,6 @@
 FROM python:3.7.3-slim-stretch
 
+ENV PATH="/home/user/.local/bin:${PATH}"
 RUN apt update
 RUN apt install -y git
 
@@ -12,5 +13,5 @@ USER user:user
 
 WORKDIR /workspace/
 
-COPY ./app/requirements.txt /
+COPY requirements.txt /
 RUN pip install --user -r /requirements.txt

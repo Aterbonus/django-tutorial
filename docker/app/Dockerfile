@@ -9,5 +9,5 @@ USER user:user
 
 WORKDIR /app/
 
-COPY ./app/requirements.txt .
+COPY requirements.txt .
 RUN pip install --user -r ./requirements.txt
